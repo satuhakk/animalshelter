@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Animalshelter</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "Animalshelter" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Animalshelter" %>">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
 
-<%= yield %>
+    <div class="topdiv">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 id="organization_title">Kodinvaihtajat Ry</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p id="slogan"> Eläinystävän asialla. </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-</body>
+    <header>
+      <%= render 'layouts/navigation' %>
+    </header>
+
+    <img id="main_img" src="../../assets/kissajakoira2.jpg">
+
+    <main role="main" class="container">
+       <%= render 'layouts/messages' %>
+       <%= yield %>
+    </main>
+
+  </body>
 </html>
