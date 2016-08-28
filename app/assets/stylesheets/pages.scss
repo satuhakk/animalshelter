@@ -2,10 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.topdiv {
-  background-color: #4DD0E1;
-  height: 100px
-}
 
 #organization_title {
   font-family: 'Amatic SC', cursive;
@@ -18,7 +14,20 @@
 
 main {
   margin-top: 0px;
-  background-color: #FFFFFF
+  background-color: #FFFFFF;
+}
+
+#firstBox {
+  padding: 80px;
+}
+
+#secondBox {
+  background-color: #4DD0E1;
+  padding: 80px;
+}
+
+#thirdBox {
+  padding: 80px;
 }
 
 .navbar {
@@ -27,10 +36,6 @@ main {
 
 #main_img {
   width: 100%
-}
-
-body {
-  font-family: 'Slabo 27px', serif;
 }
 
 footer {

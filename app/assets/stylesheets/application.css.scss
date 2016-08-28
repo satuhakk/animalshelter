@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+/* Koko sivustoa koskevat muotoilut voi laittaa tänne*/
+.topdiv {
+  background-color: #4DD0E1;
+  height: 100px
+}
+
+ body div {
+   font-family: 'Slabo 27px', serif;
+ }
